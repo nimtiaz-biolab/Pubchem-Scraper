@@ -1,26 +1,26 @@
 # Pubchem-Scraper
 
-## Load required libraries
+### Load required libraries
 ```
 library(httr)
 library(jsonlite)
 ```
 
-## Sample ligand list (replace this with your actual list of ligands)
+### Sample ligand list (replace this with your actual list of ligands)
 ```
 ligands <- c("glucose", "adenine", "caffeine")  # Replace with your 500 ligands
 ```
 
-## Initialize an empty data frame to store results
+### Initialize an empty data frame to store results
 ```
 smiles_data <- data.frame(Ligand = character(), CID = character(), SMILES = character(), stringsAsFactors = FALSE)
 ```
-## Base URL for PubChem API
+### Base URL for PubChem API
 ```
 base_url <- "https://pubchem.ncbi.nlm.nih.gov/rest/pug"
 ```
 
-## Loop through each ligand
+### Loop through each ligand
 ```
 for (i in seq_along(ligands)) {
   ligand <- ligands[i]
@@ -85,9 +85,9 @@ for (i in seq_along(ligands)) {
   }
 }
 ```
-## Display the results
+### Display the results
 ```
-print(smiles_data)
+view(smiles_data)
 ```
 
  
